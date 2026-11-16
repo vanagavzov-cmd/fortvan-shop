@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FORTVAN SHOP</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Arial,sans-serif;
+ color:white;
+ background:linear-gradient(145deg,#10162d,#25205a,#10162d);
+ min-height:100vh;
+}
+header{
+ padding:25px 18px;
+ text-align:center;
+ background:linear-gradient(120deg,#3924a8,#1264a8);
+ border-radius:0 0 25px 25px;
+}
+.logo{font-size:27px;font-weight:900;letter-spacing:2px}
+header p{color:#d8d8ff;font-size:13px}
+main{padding:20px;max-width:520px;margin:auto}
+.hero{
+ text-align:center;
+ padding:25px 10px;
+}
+.hero h1{font-size:29px;margin:8px}
+.hero p{color:#c9c9e8}
+.section-title{font-size:21px;margin:25px 0 15px}
+.card{
+ background:#252d50;
+ border:1px solid #48528b;
+ border-radius:17px;
+ padding:20px;
+ margin-bottom:14px;
+ text-align:center;
+}
+.coin{font-size:42px}
+.card h3{margin:10px 0}
+.price{color:#a9a1ff;font-weight:bold}
+button{
+ width:100%;
+ border:0;
+ padding:14px;
+ border-radius:12px;
+ background:linear-gradient(90deg,#7145ff,#287cff);
+ color:white;
+ font-weight:bold;
+ font-size:15px;
+ margin-top:12px;
+ cursor:pointer;
+}
+.info{
+ background:#202849;
+ border-radius:15px;
+ padding:17px;
+ margin-top:20px;
+ color:#dddff8;
+ line-height:1.6;
+ font-size:13px;
+}
+footer{text-align:center;padding:25px;color:#9298ba;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">⚡ FORTVAN SHOP</div>
+ <p>FORTNITE DIGITAL STORE</p>
+</header>
+
+<main>
+ <div class="hero">
+  <div style="font-size:55px">🎮</div>
+  <h1>Добро пожаловать!</h1>
+  <p>Твой игровой магазин Fortnite</p>
+ </div>
+
+ <h2 class="section-title">🪙 Наш каталог</h2>
+
+ <div class="card">
+  <div class="coin">🪙</div>
+  <h3>Официальная карта V-Bucks</h3>
+  <p class="price">Цена уточняется</p>
+  <button onclick="order('Официальная карта V-Bucks')">
+   Заказать
+  </button>
+ </div>
+
+ <div class="info">
+  <b>📌 Как сделать заказ?</b><br>
+  1. Выбери товар.<br>
+  2. Свяжись с поддержкой.<br>
+  3. Уточни наличие и условия покупки.<br><br>
+  Продаются только официальные карты
+  от авторизованных продавцов.
+</div>
+
+ <button onclick="support()">💬 Поддержка</button>
+</main>
+
+<footer>
+ FORTVAN SHOP © 2026<br>
+ Fortnite — товарный знак Epic Games.
+</footer>
+
+<script>
+const tg = window.Telegram.WebApp;
+tg.ready();
+tg.expand();
+
+const SUPPORT = "YOUR_TELEGRAM_USERNAME";
+
+function support(){
+ window.open("https://t.me/"+SUPPORT,"_blank");
+}
+function order(product){
+ const message = "Здравствуйте! Хочу заказать: "+product;
+ window.open(
+  "https://t.me/"+SUPPORT+"?text="+encodeURIComponent(message),
+  "_blank"
+ );
+}
+</script>
+</body>
+</html>
