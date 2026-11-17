@@ -24,10 +24,7 @@ header{
 .logo{font-size:27px;font-weight:900;letter-spacing:2px}
 header p{color:#d8d8ff;font-size:13px}
 main{padding:20px;max-width:520px;margin:auto}
-.hero{
- text-align:center;
- padding:25px 10px;
-}
+.hero{text-align:center;padding:25px 10px}
 .hero h1{font-size:29px;margin:8px}
 .hero p{color:#c9c9e8}
 .section-title{font-size:21px;margin:25px 0 15px}
@@ -41,27 +38,16 @@ main{padding:20px;max-width:520px;margin:auto}
 }
 .coin{font-size:42px}
 .card h3{margin:10px 0}
-.price{color:#a9a1ff;font-weight:bold}
+.price{color:#a9a1ff;font-weight:bold;font-size:20px}
 button{
- width:100%;
- border:0;
- padding:14px;
- border-radius:12px;
+ width:100%;border:0;padding:14px;border-radius:12px;
  background:linear-gradient(90deg,#7145ff,#287cff);
- color:white;
- font-weight:bold;
- font-size:15px;
- margin-top:12px;
- cursor:pointer;
+ color:white;font-weight:bold;font-size:15px;
+ margin-top:12px;cursor:pointer;
 }
 .info{
- background:#202849;
- border-radius:15px;
- padding:17px;
- margin-top:20px;
- color:#dddff8;
- line-height:1.6;
- font-size:13px;
+ background:#202849;border-radius:15px;padding:17px;
+ margin-top:20px;color:#dddff8;line-height:1.6;font-size:13px;
 }
 footer{text-align:center;padding:25px;color:#9298ba;font-size:12px}
 </style>
@@ -83,21 +69,40 @@ footer{text-align:center;padding:25px;color:#9298ba;font-size:12px}
 
  <div class="card">
   <div class="coin">🪙</div>
-  <h3>Официальная карта V-Bucks</h3>
-  <p class="price">Цена уточняется</p>
-  <button onclick="order('Официальная карта V-Bucks')">
-   Заказать
-  </button>
+  <h3>800 V-Bucks</h3>
+  <p class="price">439 ₽</p>
+  <button onclick="order('800 V-Bucks — 439 ₽')">Заказать</button>
+ </div>
+
+ <div class="card">
+  <div class="coin">🪙</div>
+  <h3>2 400 V-Bucks</h3>
+  <p class="price">1 049 ₽</p>
+  <button onclick="order('2 400 V-Bucks — 1 049 ₽')">Заказать</button>
+ </div>
+
+ <div class="card">
+  <div class="coin">🪙</div>
+  <h3>4 500 V-Bucks</h3>
+  <p class="price">1 739 ₽</p>
+  <button onclick="order('4 500 V-Bucks — 1 739 ₽')">Заказать</button>
+ </div>
+
+ <div class="card">
+  <div class="coin">🪙</div>
+  <h3>12 500 V-Bucks</h3>
+  <p class="price">3 899 ₽</p>
+  <button onclick="order('12 500 V-Bucks — 3 899 ₽')">Заказать</button>
  </div>
 
  <div class="info">
   <b>📌 Как сделать заказ?</b><br>
   1. Выбери товар.<br>
-  2. Свяжись с поддержкой.<br>
-  3. Уточни наличие и условия покупки.<br><br>
-  Продаются только официальные карты
-  от авторизованных продавцов.
-</div>
+  2. Нажми «Заказать».<br>
+  3. Уточни наличие и условия покупки у поддержки.<br><br>
+  Покупай только официальные карты и коды
+  от авторизованных продавцов. Никому не сообщай пароль от Epic Games.
+ </div>
 
  <button onclick="support()">💬 Поддержка</button>
 </main>
@@ -112,7 +117,7 @@ const tg = window.Telegram.WebApp;
 tg.ready();
 tg.expand();
 
-const SUPPORT = "YOUR_TELEGRAM_USERNAME";
+const SUPPORT = "Vanechka090";
 
 function support(){
  window.open("https://t.me/"+SUPPORT,"_blank");
@@ -127,3 +132,4 @@ function order(product){
 </script>
 </body>
 </html>
+
